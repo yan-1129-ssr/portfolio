@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="幻漓工作室" />
+    <title>幻漓工作室</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- 可替換：網站標題、導覽文案、各區塊內容與連結 -->
+
+   
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="#hero" aria-label="回到頁首">Phantom Flow</a>
+
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="開啟選單"
+        >
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+          <span class="nav-toggle-bar" aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="主要導覽">
+          <ul class="nav-list">
+            <li><a href="#about">工作室</a></li>
+            <li><a href="#projects">專案</a></li>
+            <li><a href="#skills">展望</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            class="theme-toggle"
+            id="theme-toggle"
+            aria-label="切換淺色或深色主題"
+          ></button>
+          <a class="btn btn--primary btn--sm header-cta" href="#footer">聯絡我</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero：居中標題 + 全寬預覽框（minitap 風格） -->
+      <section id="hero" class="hero section">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="container hero-stack">
+          <div class="hero-copy reveal">
+            <p class="badge">
+              <span class="badge-dot" aria-hidden="true"></span>個人工作室</p>
+            <h1 class="hero-title">
+              幻漓工作室<br />
+              <span class="hero-title-accent">夢想起源地</span>
+            </h1>
+            <p></p>本網站尚處於開發測試階段，部分功能與內容將持續更新優化。</p>
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn--primary" href="#projects">查看作品</a>
+              <a class="btn btn--secondary" href="#about">了解更多</a>
+            </div>
+          </div>
+
+          <div class="hero-demo reveal">
+            <div class="demo-chip">
+              <span class="demo-chip__dot" aria-hidden="true"></span>
+              Live preview
+            </div>
+            <div class="browser-frame browser-frame--hero">
+              <div class="browser-frame__bar">
+                <span></span><span></span><span></span>
+                <div class="browser-frame__url">portfolio.dev</div>
+              </div>
+              <div class="browser-frame__body browser-frame__body--hero">
+                <div class="mock-hero-bar"></div>
+                <div class="mock-grid">
+                  <div class="mock-card mock-card--accent"></div>
+                  <div class="mock-card"></div>
+                  <div class="mock-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Logo 跑馬燈 -->
+      <section class="marquee section-marquee" aria-label="技術與工具">
+        <div class="container">
+          <p class="marquee-label">Tech stack</p>
+        </div>
+        <div class="marquee-viewport" aria-hidden="true">
+          <ul class="marquee-track">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Figma</li>
+            <li>Git</li>
+            <li>Responsive</li>
+            <li>Accessibility</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Figma</li>
+            <li>Git</li>
+            <li>Responsive</li>
+            <li>Accessibility</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- How it works：Tab 切換 -->
+      <section id="how" class="section section-how">
+        <div class="container">
+          <header class="section-header section-header--center reveal">
+            <p class="section-label">How it works</p>
+            <h2>從發想到上線，<br />我如何完成一個作品。</h2>
+          </header>
+
+          <div class="tabs reveal" role="tablist" aria-label="工作流程">
+            <button
+              type="button"
+              class="tabs__btn is-active"
+              role="tab"
+              id="tab-design"
+              aria-selected="true"
+              aria-controls="panel-design"
+              data-tab="design"
+            >
+              設計
+            </button>
+            <button
+              type="button"
+              class="tabs__btn"
+              role="tab"
+              id="tab-build"
+              aria-selected="false"
+              aria-controls="panel-build"
+              data-tab="build"
+            >
+              開發
+            </button>
+            <button
+              type="button"
+              class="tabs__btn"
+              role="tab"
+              id="tab-ship"
+              aria-selected="false"
+              aria-controls="panel-ship"
+              data-tab="ship"
+            >
+              上線
+            </button>
+          </div>
+
+          <div class="tab-panels reveal">
+            <article
+              class="tab-panel is-active"
+              role="tabpanel"
+              id="panel-design"
+              aria-labelledby="tab-design"
+              data-panel="design"
+            >
+              <div class="tab-panel__frame">
+                <div class="mock-wireframe">
+                  <div class="mock-wireframe__row">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="mock-wireframe__block mock-wireframe__block--lg"></div>
+                  <div class="mock-wireframe__cols">
+                    <div></div><div></div><div></div>
+                  </div>
+                </div>
+              </div>
+              <p class="tab-panel__caption">釐清需求、建立版型與視覺層級</p>
+            </article>
+            <article
+              class="tab-panel"
+              role="tabpanel"
+              id="panel-build"
+              aria-labelledby="tab-build"
+              data-panel="build"
+              hidden
+            >
+              <div class="tab-panel__frame">
+                <div class="mock-code">
+                  <p><span class="mock-code__n">1</span><span class="mock-code__k">const</span> app = document.querySelector(<span class="mock-code__s">'.app'</span>);</p>
+                  <p><span class="mock-code__n">2</span>app.classList.add(<span class="mock-code__s">'is-ready'</span>);</p>
+                  <p><span class="mock-code__n">3</span><span class="mock-code__c">// 語意化 HTML + 模組化 CSS</span></p>
+                </div>
+              </div>
+              <p class="tab-panel__caption">原生 HTML / CSS / JS，結構清晰可維護</p>
+            </article>
+            <article
+              class="tab-panel"
+              role="tabpanel"
+              id="panel-ship"
+              aria-labelledby="tab-ship"
+              data-panel="ship"
+              hidden
+            >
+              <div class="tab-panel__frame">
+                <div class="mock-status">
+                  <div class="mock-status__row mock-status__row--ok">
+                    <span>RWD 檢查</span><span>通過</span>
+                  </div>
+                  <div class="mock-status__row mock-status__row--ok">
+                    <span>可及性</span><span>通過</span>
+                  </div>
+                  <div class="mock-status__row">
+                    <span>部署</span><span>Ready</span>
+                  </div>
+                </div>
+              </div>
+              <p class="tab-panel__caption">測試、優化，交付可上線的版本</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="stats section" aria-label="重點數據">
+        <div class="container">
+          <ul class="stats-grid">
+            <li class="stat-item reveal">
+              <span class="stat-value">3+</span>
+              <span class="stat-label">精選作品</span>
+            </li>
+            <li class="stat-item reveal">
+              <span class="stat-value">6</span>
+              <span class="stat-label">核心技能</span>
+            </li>
+            <li class="stat-item reveal">
+              <span class="stat-value">3</span>
+              <span class="stat-label">重要經歷</span>
+            </li>
+            <li class="stat-item reveal">
+              <span class="stat-value">100%</span>
+              <span class="stat-label">可及性優先</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Features：左右交替展示（minitap product 區塊） -->
+      <section id="about" class="section section-features">
+        <div class="container">
+          <header class="section-header section-header--center reveal">
+            <p class="section-label">Features</p>
+            <h2>我如何把作品<br />從零做到可上線。</h2>
+          </header>
+
+          <div class="showcase-list">
+            <article class="showcase-row reveal">
+              <div class="showcase-copy">
+                <p class="showcase-label">Semantic markup</p>
+                <h3>用語意化結構，讓內容可被理解。</h3>
+                <p>
+                  我專注於語意化 HTML、可維護的 CSS 與穩健的 JavaScript，
+                  喜歡在細節裡打磨質感，讓介面既好看也好用。
+                </p>
+                <ul class="pill-list">
+                  <li>語意標籤</li>
+                  <li>SEO 基礎</li>
+                  <li>可及性優先</li>
+                </ul>
+              </div>
+              <div class="showcase-panel">
+                <div class="panel-card">
+                  <p class="panel-card__tag">HTML</p>
+                  <div class="mock-code mock-code--sm">
+                    <p><span class="mock-code__n">1</span>&lt;<span class="mock-code__k">section</span> <span class="mock-code__a">aria-label</span>=<span class="mock-code__s">"作品"</span>&gt;</p>
+                    <p><span class="mock-code__n">2</span>&nbsp;&nbsp;&lt;<span class="mock-code__k">h2</span>&gt;精選作品&lt;/<span class="mock-code__k">h2</span>&gt;</p>
+                    <p><span class="mock-code__n">3</span>&lt;/<span class="mock-code__k">section</span>&gt;</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="showcase-row showcase-row--reverse reveal">
+              <div class="showcase-copy">
+                <p class="showcase-label">Design systems</p>
+                <h3>用設計系統，讓風格一致可擴充。</h3>
+                <p>
+                  從版型與元件設計到互動與可及性，我習慣以使用者為中心迭代，
+                  並與設計、後端協作讓專案順利落地。
+                </p>
+                <ul class="pill-list">
+                  <li>CSS 變數</li>
+                  <li>元件化</li>
+                  <li>響應式</li>
+                </ul>
+              </div>
+              <div class="showcase-panel">
+                <div class="panel-card">
+                  <p class="panel-card__tag">CSS tokens</p>
+                  <div class="mock-tokens">
+                    <div><span>--color-purple</span><i></i></div>
+                    <div><span>--color-plum</span><i></i></div>
+                    <div><span>--radius</span><span class="mock-tokens__val">16px</span></div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="showcase-row reveal">
+              <div class="showcase-copy">
+                <p class="showcase-label">Interaction</p>
+                <h3>用互動細節，提升使用體驗。</h3>
+                <p>
+                  相信好的介面是清晰、一致且可被理解的；
+                  技術應服務於體驗，而非成為使用者的負擔。
+                </p>
+                <ul class="pill-list">
+                  <li>平滑捲動</li>
+                  <li>主題切換</li>
+                  <li>捲動動效</li>
+                </ul>
+              </div>
+              <div class="showcase-panel">
+                <div class="panel-card">
+                  <p class="panel-card__tag">Test run</p>
+                  <div class="mock-checklist">
+                    <div class="mock-checklist__item mock-checklist__item--ok">
+                      <span>導覽列</span><span>0:04</span>
+                    </div>
+                    <div class="mock-checklist__item mock-checklist__item--ok">
+                      <span>深淺色切換</span><span>0:09</span>
+                    </div>
+                    <div class="mock-checklist__item">
+                      <span>手機選單</span><span>0:14</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section section-projects">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-label">Projects</p>
+            <h2>開發中專案</h2>
+            <p class="section-lead">
+              三個代表性專案；將下方標題、描述與圖片替換為你的真實作品。
+            </p>
+          </header>
+
+          <div class="projects-grid">
+            <article class="project-card reveal">
+              <div class="project-thumb" role="img" aria-label="作品一預覽圖佔位"></div>
+              <div class="project-body">
+                <h3>稚光日常</h3>
+                <p>
+                  【預計 2028-2030 推出】
+                  結合多種族少年陪伴、角色養成與沉浸式互動的治癒系女性向手遊企劃。
+                </p>
+                <ul class="tags" aria-label="使用技術">
+                  <li>女性向</li>
+                  <li>休閒</li>
+                  <li>養成</li>
+                  <li>16+</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-thumb project-thumb--alt" role="img" aria-label="作品二預覽圖佔位"></div>
+              <div class="project-body">
+                <h3>蝕光法則</h3>
+                <p>
+                  【預計 2032-2036 推出】
+                  具備獨立世界觀設定、深度劇情發展與角色關係締結的沉浸式女性向 JRPG 專案。
+                </p>
+                <ul class="tags" aria-label="使用技術">
+                  <li>女性向</li>
+                  <li>角色扮演</li>
+                  <li>BG</li>
+                  <li>GL</li>
+                  <li>16+</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-thumb project-thumb--alt2" role="img" aria-label="作品三預覽圖佔位"></div>
+              <div class="project-body">
+                <h3>悖論餘溫</h3>
+                <p>
+                  【預計 2040-2042 推出】
+                  為《蝕光法則》之核心情感衍生外傳（FD），與各角色的深度情感羈絆、專屬劇情篇章與高張力的世界觀解密。
+                </p>
+                <ul class="tags" aria-label="使用技術">
+                  <li>女性向</li>
+                  <li>角色扮演</li>
+                  <li>BG</li>
+                  <li>GL</li>
+                  <li>18+</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills：整合標籤牆 -->
+      <section id="skills" class="section section-skills">
+        <div class="container">
+          <header class="section-header section-header--center reveal">
+            <p class="section-label">Integrations</p>
+            <h2>我使用的工具與技術</h2>
+            <p class="section-lead">
+              我擅長的技術棧與工具；可依你的履歷調整項目與排序。
+            </p>
+          </header>
+          <ul class="integration-grid reveal">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Git</li>
+            <li>Figma</li>
+            <li>RWD</li>
+            <li>A11y</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section section-experience">
+        <div class="container">
+          <header class="section-header reveal">
+            <p class="section-label">Experience</p>
+            <h2>經歷</h2>
+            <p class="section-lead">
+              比賽、檢定與活動紀錄；請替換為你的真實項目與日期。
+            </p>
+          </header>
+          <ul class="experience-list">
+            <li class="experience-item reveal">
+              <div class="experience-item__meta">
+                <span class="experience-index" aria-hidden="true">01</span>
+                <time class="timeline-date" datetime="2024-05">2024 · 五月</time>
+              </div>
+              <div class="experience-item__body">
+                <h3>全國網頁設計競賽 · 佳作</h3>
+                <p>
+                  與團隊完成單頁式作品，著重資訊層級與 RWD，
+                  評審肯定互動細節與程式結構清晰度。
+                </p>
+              </div>
+            </li>
+            <li class="experience-item reveal">
+              <div class="experience-item__meta">
+                <span class="experience-index" aria-hidden="true">02</span>
+                <time class="timeline-date" datetime="2023-11">2023 · 十一月</time>
+              </div>
+              <div class="experience-item__body">
+                <h3>Python 能力檢定 · 通過</h3>
+                <p>
+                  熟練基礎語法、資料結構與檔案處理，
+                  能將腳本思維應用在小型自動化與後端協作。
+                </p>
+              </div>
+            </li>
+            <li class="experience-item reveal">
+              <div class="experience-item__meta">
+                <span class="experience-index" aria-hidden="true">03</span>
+                <time class="timeline-date" datetime="2023-03">2023 · 三月</time>
+              </div>
+              <div class="experience-item__body">
+                <h3>校園黑客松 · 參與</h3>
+                <p>
+                  48 小時內從發想到原型，負責前端版型與動效，
+                  練習在有限時間內溝通與取捨。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section section-faq">
+        <div class="container">
+          <header class="section-header section-header--center reveal">
+            <p class="section-label">FAQ</p>
+            <h2>常見問題</h2>
+          </header>
+          <div class="faq-list reveal">
+            <details class="faq-item" open>
+              <summary>這個作品集是用什麼技術做的？</summary>
+              <p>純原生 HTML、CSS、JavaScript，沒有使用 Tailwind 或 React 等框架，方便學習與維護。</p>
+            </details>
+            <details class="faq-item">
+              <summary>可以切換深色模式嗎？</summary>
+              <p>可以。點右上角的主題切換按鈕，或在不同裝置上依照系統偏好顯示。</p>
+            </details>
+            <details class="faq-item">
+              <summary>如何替換成我自己的內容？</summary>
+              <p>主要修改 index.html 裡的文字與連結；配色在 style.css 最上方的 CSS 變數區調整。</p>
+            </details>
+            <details class="faq-item">
+              <summary>支援手機瀏覽嗎？</summary>
+              <p>支援。全站採響應式設計，導覽列在手機上會收合為選單。</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-banner section" aria-label="行動呼籲">
+        <div class="container">
+          <div class="cta-frame reveal">
+            <div class="cta-frame__inner">
+              <p class="section-label">Contact</p>
+              <h2>一起把下一個想法<br />變成上線的產品。</h2>
+              <p class="section-lead">
+                無論是作品集、品牌官網或互動原型，都歡迎與我聯繫。
+              </p>
+              <div class="cta-banner__actions">
+                <a class="btn btn--primary" href="mailto:hello@example.com">寄信給我</a>
+                <a class="btn btn--secondary" href="#projects">瀏覽作品</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="site-footer">
+      <div class="container footer-grid reveal">
+        <div class="footer-brand">
+          <p class="footer-name">幻漓工作室</p>
+          <a class="footer-email" href="mailto:guli081129@gmail.com">guli081129@gmail.com</a>
+          <p class="footer-tagline">持續更新 · 創作 · 分享</p>
+        </div>
+
+        <div class="footer-main">
+          <p class="footer-nav__title">Main</p>
+          <ul class="social-list" aria-label="社群連結">
+            <li>
+              <a href="https://github.com/Phantom-Flow-Studio" rel="noopener noreferrer" target="_blank">Github</a>
+            </li>
+            <li>
+              <a href="https://line.me/R/ti/p/@950lfeic" rel="noopener noreferrer" target="_blank">LINE</a>
+            </li>
+          </ul>
+        </div> 
+
+        <div class="footer-social">
+          <p class="footer-nav__title">Socials</p>
+          <ul class="social-list" aria-label="社群連結">
+            <li>
+              <a href="https://www.facebook.com/share/1GurEFx4Wc/?mibextid=wwXIfr" rel="noopener noreferrer" target="_blank">Facebook</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/phantom.flow.studio?igsi=MWV2NTRqbXJuM2ZueA%3D%3D&utm_source=qr" rel="noopener noreferrer" target="_blank">Instergram</a>
+            </li>
+            <li>
+              <a href="https://www.threads.com/@phantom.flow.studio?igshid=NTc4MTIwNjQ2YQ=="rel="noopener noreferrer" target="_blank">Threads</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p class="copyright">
+          <small>Copyright &copy; <span id="year"></span> Phantom Flow Studio. All Rights Reserved.</small>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
